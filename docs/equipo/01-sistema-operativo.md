@@ -51,20 +51,40 @@ Se documentan para que la decisión sea informada, no para empujarla.
 | Kali/Parrot como sistema principal | Trae el toolkit ofensivo | Mala práctica para un equipo de trabajo diario: mezcla herramientas de laboratorio con datos reales. Kali va **como VM**, no como host |
 | Doble boot Windows | Cobertura de Windows Server / AD | Reiniciar para cambiar de materia. Windows va como VM |
 
-## Dónde sí vale la pena una instalación nueva
+## Almacenamiento: verificado, hay un solo slot
 
-Un caso concreto: si el disco tiene un **segundo slot M.2 libre**, instalar el
-laboratorio en un NVMe interno dedicado y dejar el sistema actual intacto es la
-opción más limpia (rendimiento de VM mucho mayor que USB-C, y aislamiento físico
-entre trabajo y práctica). Es la única reinstalación que se justifica, y solo si
-el slot existe.
+Máquina identificada: **Dell Latitude 5430**, placa `01Y2TP`. El manual oficial
+(*Setup and Specifications → Internal slots*) declara exactamente dos slots M.2:
+uno **2230 para WiFi/Bluetooth** (ocupado por el CNVi de Intel) y **uno solo
+2230/2280 para SSD** (ocupado por el SN530 de 512 GB). No hay segundo slot para
+datos.
+
+La topología PCIe del equipo lo confirma: el único root port x4 (`00:1c.0`)
+alimenta el SSD, el x1 (`00:1d.0`) alimenta el lector de tarjetas, y los dos
+root ports de Thunderbolt (`00:07.0/07.1`) están vacíos. No queda ningún enlace
+libre.
+
+El camino de "poner el laboratorio en un segundo NVMe interno" **no existe en
+esta máquina**. Las opciones reales son tres:
+
+| Opción | A favor | En contra | Costo |
+| --- | --- | --- | --- |
+| **A. Reemplazar el SSD interno por 2 TB** | Velocidad nativa, un solo dispositivo, 2 TB en un solo lugar | Migrar o reinstalar 268 GB de sistema; tocar hardware; el disco viejo queda libre solo si hay dónde ponerlo | US$ 100–160 (NVMe) |
+| **B. SSD externo USB-C de 1–2 TB** | Cero riesgo sobre el sistema actual; se puede comprar y usar el mismo día | ~1 GB/s por USB 3.2 Gen2 en el mejor caso; latencia peor para I/O pesado de VMs | US$ 80–130 |
+| **C. A + B (recomendado)** | 2 TB internos para sistema + laboratorio activo, y el SN530 de 512 GB pasa a una carcasa USB-C como respaldo y disco de forense | Cuesta las dos cosas y algo de trabajo de migración | US$ 115–185 |
+
+En las tres, el cifrado entra en el mismo movimiento: migrar es la única
+oportunidad barata de tener LUKS sin reinstalar dos veces.
+
+**Dato a verificar antes de comprar:** si el SN530 instalado es formato **2230**
+(lo habitual en este modelo, montado en un soporte) o **2280**. Cambia qué
+dispositivo comprar y si hace falta el soporte de 2280. Se ve abriendo la tapa;
+no se deduce por software.
 
 ## Decisión pendiente (tuya)
 
-1. ¿Se compra el NVMe (externo o interno según slot) en noviembre, o se arranca
-   con los ~50 GB recuperados y se compra en enero?
-2. ¿El cifrado va sobre un volumen dedicado del laboratorio, o se evalúa cifrar
-   también el sistema en algún receso?
-
-Ninguna de las dos bloquea la preparación. La primera bloquea el laboratorio
-completo; la segunda, no bloquea nada hasta que haya datos de práctica.
+1. ¿Opción A, B o C? Y si es A/C: ¿migración por clonado o reinstalación limpia
+   con LUKS desde cero? (la reinstalación limpia es la oportunidad de dejar el
+   sistema cifrado, pero cuesta un fin de semana)
+2. ¿Se compra en noviembre o en enero? Ni la preparación ni el arranque de
+   cursada dependen de esto; solo el laboratorio completo.

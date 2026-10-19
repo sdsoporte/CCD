@@ -53,12 +53,37 @@ para arrancar el primer año sin comprar nada.
 
 | Prioridad | Qué | Por qué | Orden de precio |
 | --- | --- | --- | --- |
-| 1 | SSD NVMe externo 1–2 TB por USB-C | Resuelve el único límite duro. VMs, imágenes forenses y datasets viven ahí | US$ 80–130 |
-| 2 | (opcional) carcasa USB-C para el disco que ya tengas | Si hay un SSD SATA libre, sale mucho más barato | US$ 15–25 |
-| 3 | (opcional) switch administrable de 5 puertos | VLANs reales con la NIC cableada; se puede reemplazar por redes virtuales | US$ 30–50 |
+| 1 | SSD NVMe **interno 2 TB (2230 o 2280 según el formato del actual)** | Reemplaza al SN530 de 512 GB: 2 TB a velocidad nativa. **No hay segundo slot** (verificado) | US$ 100–160 |
+| 2 | Carcasa USB-C para NVMe de 2242/2280 | El SN530 que sale del equipo pasa a ser respaldo y disco de trabajo forense | US$ 15–25 |
+| 3 | SSD NVMe **externo** USB-C 1–2 TB | Alternativa completa a (1): cero riesgo sobre el sistema, ~1 GB/s por USB 3.2 Gen2 | US$ 80–130 |
+| 4 | (opcional) switch administrable de 5 puertos | VLANs reales con la NIC cableada; se puede reemplazar por redes virtuales | US$ 30–50 |
 | — | GPU dedicada | **No comprar.** Materia introductoria de 80 h; la nube gratuita cubre el resto | — |
 | — | RAM | **No comprar.** 30 GiB sobran | — |
 
-Antes de comprar: verificar si el equipo tiene un segundo slot M.2 libre. Un
-NVMe interno de 2 TB rinde más que uno externo por USB-C. Se confirma con
-`sudo dmidecode -t slot` o abriendo la tapa; no se asume.
+Antes de comprar, la pregunta del segundo slot ya está resuelta: **no existe**.
+Ver `01-sistema-operativo.md`, sección *Almacenamiento*.
+
+## Modelo exacto (verificado 2026-10-19)
+
+Dell Latitude 5430, placa `01Y2TP`, BIOS 1.41.0 (2026-07-23).
+Según el manual oficial *Setup and Specifications → Internal slots*:
+
+| Slot | Cantidad | Estado en este equipo |
+| --- | --- | --- |
+| M.2 2230 para WiFi/Bluetooth | 1 | Ocupado (Intel CNVi) |
+| M.2 2230/2280 para SSD | **1** | Ocupado (WD SN530 512 GB) |
+
+No hay un tercer slot. El modelo *5430 Rugged* sí tiene un M.2 3042 para WWAN,
+pero es otra máquina.
+
+Confirmación en vivo, por topología PCIe:
+
+| Root port | Ancho | Qué cuelga |
+| --- | --- | --- |
+| `00:1c.0` | x4 | SN530 NVMe — el único slot de SSD |
+| `00:1d.0` | x1 | Lector de tarjetas Realtek RTS525A |
+| `00:07.0/07.1` | — | Thunderbolt 4, sin dispositivos |
+
+No queda ningún root port libre: no hay un segundo slot cableado, aunque se
+quisiera usar el de WWAN (que además en este modelo no es un M.2 estándar y
+Dell no soporta SSD ahí).
