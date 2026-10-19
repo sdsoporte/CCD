@@ -10,7 +10,29 @@
     "subjects_count": 37,
     "years": 4,
     "semesters": 8,
-    "caveat": "Per-semester grouping is not reliably recoverable from the source PDF (merged spreadsheet cells); year and cycle totals are exact. Verify grouping against the official plan before depending on it."
+    "caveat": "Per-semester grouping is not reliably recoverable from the source PDF (merged spreadsheet cells); year and cycle totals are exact. A cross-check against the 2026 FADENA campus confirms all 18 subjects of years 1-2 by name, contradicts the year assignment of subjects 11 and 12, and does not resolve semester grouping. Verify against the approved plan before depending on it.",
+    "campus_crosscheck": {
+      "checked_at": "2026-10-19",
+      "source": "https://campus.fadena.undef.edu.ar/course/index.php?categoryid=25",
+      "method": "Public course index, no authentication required. Course names and LCiberDef-* codes are visible to anonymous visitors; course contents are not.",
+      "verified": {
+        "distinct_subjects_in_years_1_and_2": 18,
+        "subjects_matching_this_plan_by_name": 18,
+        "subjects_unknown_to_this_plan": 0,
+        "conclusion": "The 37-subject list is confirmed: every campus subject exists in this plan with the same name."
+      },
+      "year_conflicts": [
+        { "n": 11, "name": "Análisis Matemático II", "plan_year": 1, "campus_year": 2 },
+        { "n": 12, "name": "Álgebra II", "plan_year": 1, "campus_year": 2 }
+      ],
+      "not_present_in_campus_years_1_2": [
+        { "n": 7, "name": "Infraestructura de Telecomunicaciones", "plan_year": 1, "note": "No 2026 course shell. May belong to year 3 or may simply not have been opened yet; the campus cannot decide." },
+        { "n": 20, "name": "Sistema de Gestión de Seguridad de la Información", "plan_year": 2, "note": "No 2026 course shell. May belong to year 3 or may simply not have been opened yet." },
+        { "n": 21, "name": "Protección de Infraestructuras Críticas", "plan_year": 2, "note": "No 2026 course shell. May belong to year 3 or may simply not have been opened yet." }
+      ],
+      "semester_grouping": "Still unresolved. The 2026 categories are not a clean semester partition: '1er año - 2do Cuatrimestre' repeats the same subjects as the first semester (codes 01, 02, 03, 04, 05, 08, 10) and includes a duplicate labelled 'copia 1'.",
+      "code_warning": "LCiberDef-NN resets per year and is NOT a global subject key. LCiberDef-06 is 'Sistemas de Tratamiento de Datos' in year 1 and 'Ciberseguridad aplicada' in year 2."
+    }
   },
   "cycles": [
     {

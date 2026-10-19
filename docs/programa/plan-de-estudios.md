@@ -99,12 +99,54 @@ Avanzada: 432 + 320 + 288 = **1040 h**. Total licenciatura: **2624 h**.
    desplaza (por ejemplo, el rótulo de tercer año aparece entre las materias 21
    y 22). El **total por ciclo y por año sí cierra exacto**, y las
    correlatividades son consistentes. La distribución fina por cuatrimestre hay
-   que confirmarla en la fuente oficial (página de la carrera o el plan
-   aprobado), no adivinarla desde el PDF.
+   que confirmarla en el plan aprobado, no adivinarla desde el PDF. Ver el
+   cotejo contra el campus más abajo: confirma la lista de materias, corrige
+   años y no resuelve el cuatrimestre.
 2. Las correlatividades están expresadas como número de materia, tal como
    aparecen en el original.
 3. Las horas son **cátedra**, no de estudio personal. El tiempo real de estudio
    fuera de clase suele ser entre 1 y 2 veces la carga de clase.
+
+## Cotejo contra el campus virtual (2026-10-19)
+
+El campus de FADENA publica los nombres de las materias y sus códigos oficiales
+**sin requerir sesión**. Eso permitió cotejar la lista contra la fuente
+operativa de la facultad, que es más actual que el PDF.
+
+| Categoría del campus | Materias listadas |
+| --- | --- |
+| 1er año – 1er cuatrimestre – LC 2026 | 7 |
+| 1er año – 2do cuatrimestre – LC 2026 | 10 (9 distintas) |
+| 2do año – 1er cuatrimestre – LC 2026 | 8 |
+| 2do año – 2do cuatrimestre – LC 2026 | 9 |
+
+Resultado: **18 materias distintas** en los dos primeros años. Las 18 existen
+en este plan con el mismo nombre y **ninguna materia del campus es ajena al
+plan**. Ese es el dato importante: la lista de 37 materias queda confirmada.
+
+Discrepancias encontradas:
+
+| Materia | Este plan | Campus 2026 |
+| --- | --- | --- |
+| 11 Análisis Matemático II | año 1 | **año 2** |
+| 12 Álgebra II | año 1 | **año 2** |
+| 7 Infraestructura de Telecomunicaciones | año 1 | no aparece |
+| 20 Sistema de Gestión de Seguridad de la Información | año 2 | no aparece |
+| 21 Protección de Infraestructuras Críticas | año 2 | no aparece |
+
+Las materias 11 y 12 el campus las dicta en segundo año: la asignación de año
+de este plan está mal en esos dos casos. Las materias 7, 20 y 21 no tienen aula
+creada en 2026; pueden ser de tercer año o simplemente no haberse abierto
+todavía, y **el campus no alcanza para decidir cuál de las dos**.
+
+El cuatrimestre sigue sin resolverse. Las categorías de 2026 no son una
+partición limpia: la de 1er año – 2do cuatrimestre repite las mismas materias
+del primero (01, 02, 03, 04, 05, 08 y 10) e incluso incluye una «copia 1». Para
+fijar la distribución fina hace falta el plan aprobado, no el campus.
+
+Nota de operación: el código `LCiberDef-NN` **se reinicia por año**, no es un
+identificador único de materia. `LCiberDef-06` es *Sistemas de Tratamiento de
+Datos* en 1er año y *Ciberseguridad aplicada* en 2do. No usarlo como clave.
 
 ## Lo que este plan te está pidiendo, en materia de perfil
 
