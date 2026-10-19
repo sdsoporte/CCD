@@ -1,0 +1,18 @@
+# Laboratorio y material pesado nunca versionado
+laboratorio/vms/
+laboratorio/isos/
+laboratorio/imagenes-forenses/
+laboratorio/*.qcow2
+laboratorio/*.img
+
+# Salidas de práctica
+*.log
+*.pcap
+*.raw
+
+# Entorno
+.env
+.venv/
+
+# Sistema
+.DS_Store

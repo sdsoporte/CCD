@@ -1,0 +1,76 @@
+{
+  "meta": {
+    "source_file": "docs/Licenciatura-en-Ciberdefensa.pdf",
+    "institution": "UNDEF - Facultad de la Defensa Nacional (FADENA)",
+    "degree": "Licenciatura en Ciberdefensa",
+    "intermediate_degree": "Analista Universitario en Gestión de Riesgos Cibernéticos",
+    "total_hours": 2624,
+    "basic_cycle_hours": 1584,
+    "advanced_cycle_hours": 1040,
+    "subjects_count": 37,
+    "years": 4,
+    "semesters": 8,
+    "caveat": "Per-semester grouping is not reliably recoverable from the source PDF (merged spreadsheet cells); year and cycle totals are exact. Verify grouping against the official plan before depending on it."
+  },
+  "cycles": [
+    {
+      "id": "basic",
+      "name": "Ciclo de Formación Básica",
+      "hours": 1584,
+      "closes_with": "Analista Universitario en Gestión de Riesgos Cibernéticos",
+      "subjects": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+    },
+    {
+      "id": "advanced",
+      "name": "Ciclo de Formación Avanzada",
+      "hours": 1040,
+      "closes_with": "Licenciado/a en Ciberdefensa",
+      "subjects": [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37]
+    }
+  ],
+  "year_hours": {
+    "year_1": 768,
+    "year_2": 672,
+    "year_3": 576,
+    "year_4": 608
+  },
+  "subjects": [
+    { "n": 1, "name": "Análisis Matemático I", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 2, "name": "Álgebra I", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 3, "name": "Gestión de Servicios de Información", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 4, "name": "Inglés I", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 5, "name": "Sistemas Operativos I", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 6, "name": "Sistemas de Tratamiento de Datos", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [3] },
+    { "n": 7, "name": "Infraestructura de Telecomunicaciones", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [3] },
+    { "n": 8, "name": "Sociedad y Estado", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 9, "name": "Sistemas Operativos II", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [5] },
+    { "n": 10, "name": "Lenguajes de Programación", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 11, "name": "Análisis Matemático II", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [1] },
+    { "n": 12, "name": "Álgebra II", "year": 1, "theory": 32, "practice": 32, "total": 64, "correlatives": [2] },
+    { "n": 13, "name": "Probabilidad y Estadística", "year": 2, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 14, "name": "Inglés II", "year": 2, "theory": 32, "practice": 32, "total": 64, "correlatives": [4] },
+    { "n": 15, "name": "Tecnología Operativa", "year": 2, "theory": 40, "practice": 40, "total": 80, "correlatives": [] },
+    { "n": 16, "name": "Programación Segura", "year": 2, "theory": 48, "practice": 48, "total": 96, "correlatives": [6, 7, 10] },
+    { "n": 17, "name": "Ciberseguridad aplicada", "year": 2, "theory": 40, "practice": 40, "total": 80, "correlatives": [] },
+    { "n": 18, "name": "Dispositivos Remotos e Internet de las Cosas", "year": 2, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 19, "name": "Ética Profesional", "year": 2, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 20, "name": "Sistema de Gestión de Seguridad de la Información", "year": 2, "theory": 48, "practice": 48, "total": 96, "correlatives": [3, 6, 7, 17] },
+    { "n": 21, "name": "Protección de Infraestructuras Críticas", "year": 2, "theory": 32, "practice": 32, "total": 64, "correlatives": [3, 8, 17] },
+    { "n": 22, "name": "Metodologías de Análisis de Riesgos de TIC", "year": 3, "theory": 40, "practice": 40, "total": 80, "correlatives": [] },
+    { "n": 23, "name": "Análisis de Escenarios y Capacidades", "year": 3, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 24, "name": "Gobierno y Políticas Públicas", "year": 3, "theory": 32, "practice": 32, "total": 64, "correlatives": [8] },
+    { "n": 25, "name": "Informática Forense", "year": 3, "theory": 40, "practice": 40, "total": 80, "correlatives": [5, 16, 20] },
+    { "n": 26, "name": "Relaciones Internacionales", "year": 3, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 27, "name": "Inteligencia Artificial y Aprendizaje de Máquina", "year": 3, "theory": 40, "practice": 40, "total": 80, "correlatives": [10] },
+    { "n": 28, "name": "Geopolítica", "year": 3, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 29, "name": "Derecho Aplicado a la Defensa Nacional", "year": 3, "theory": 40, "practice": 40, "total": 80, "correlatives": [8] },
+    { "n": 30, "name": "Sistema de Inteligencia Nacional", "year": 4, "theory": 40, "practice": 40, "total": 80, "correlatives": [] },
+    { "n": 31, "name": "Investigación Operativa", "year": 4, "theory": 40, "practice": 40, "total": 80, "correlatives": [] },
+    { "n": 32, "name": "Criptografía Aplicada", "year": 4, "theory": 48, "practice": 48, "total": 96, "correlatives": [21] },
+    { "n": 33, "name": "Gestión de Proyectos", "year": 4, "theory": 32, "practice": 32, "total": 64, "correlatives": [] },
+    { "n": 34, "name": "Instrumento Militar y su Sistema de Armas", "year": 4, "theory": 40, "practice": 40, "total": 80, "correlatives": [30] },
+    { "n": 35, "name": "Modelos y Simulación", "year": 4, "theory": 40, "practice": 40, "total": 80, "correlatives": [31] },
+    { "n": 36, "name": "Prospectiva Estratégica y Táctica", "year": 4, "theory": 32, "practice": 32, "total": 64, "correlatives": [35] },
+    { "n": 37, "name": "Actores en el Quinto Dominio", "year": 4, "theory": 32, "practice": 32, "total": 64, "correlatives": [] }
+  ]
+}
