@@ -21,6 +21,7 @@ docs/
   equipo/00-diagnostico.md           La máquina que tenés, medida
   equipo/01-sistema-operativo.md     Decisión de SO/distro y por qué
   equipo/02-laboratorio.md           Arquitectura del laboratorio de práctica
+  equipo/03-inventario.md            Qué está respaldado y qué no, medido
   integracion-coach.md               Cómo se suma esto al sistema de planificación
 ```
 
@@ -36,6 +37,8 @@ en cuatrimestre. Ese número manda sobre cualquier plan que se escriba acá.
 - [x] Plan de estudios estructurado
 - [x] Plan de preparación 2026-11 → 2027-03
 - [x] Diagnóstico de equipo y decisión de sistema operativo
+- [x] Inventario de proyectos y respaldo en GitHub (40 repos)
+- [ ] Backup local con restic (bloqueado: no hay disco externo)
 - [ ] Laboratorio montado (guía escrita, ejecución pendiente)
 - [ ] Integración con Coach aplicada (diseño escrito, ejecución pendiente)
 - [ ] Fichas por materia (se escriben a medida que avanza la preparación)
