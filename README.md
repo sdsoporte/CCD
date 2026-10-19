@@ -18,6 +18,7 @@ docs/
   programa/plan-de-estudios.md       Las 37 materias, correlatividades y cargas
   programa/plan-de-estudios.json     Los mismos datos, legibles por máquina
   preparacion/plan-prep.md           Qué estudiar antes de arrancar y con qué horas
+  preparacion/ingreso.md             Curso introductorio, requisitos y trámites
   equipo/00-diagnostico.md           La máquina que tenés, medida
   equipo/01-sistema-operativo.md     Decisión de SO/distro y por qué
   equipo/02-laboratorio.md           Arquitectura del laboratorio de práctica

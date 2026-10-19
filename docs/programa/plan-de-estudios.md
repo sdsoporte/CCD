@@ -98,51 +98,56 @@ Avanzada: 432 + 320 + 288 = **1040 h**. Total licenciatura: **2624 h**.
    `SEGUNDO CUATRIMESTRE` están combinadas en celdas y el texto extraído las
    desplaza (por ejemplo, el rótulo de tercer año aparece entre las materias 21
    y 22). El **total por ciclo y por año sí cierra exacto**, y las
-   correlatividades son consistentes. La distribución fina por cuatrimestre hay
-   que confirmarla en el plan aprobado, no adivinarla desde el PDF. Ver el
-   cotejo contra el campus más abajo: confirma la lista de materias, corrige
-   años y no resuelve el cuatrimestre.
+   correlatividades son consistentes. **Resuelto el 2026-10-19:** FADENA
+   publica el plan de estudios oficial en PDF, y ese documento sí trae la
+   distribución por cuatrimestre. Ver la sección siguiente.
 2. Las correlatividades están expresadas como número de materia, tal como
    aparecen en el original.
 3. Las horas son **cátedra**, no de estudio personal. El tiempo real de estudio
    fuera de clase suele ser entre 1 y 2 veces la carga de clase.
 
-## Cotejo contra el campus virtual (2026-10-19)
+## Verificación contra el plan oficial (2026-10-19)
 
-El campus de FADENA publica los nombres de las materias y sus códigos oficiales
-**sin requerir sesión**. Eso permitió cotejar la lista contra la fuente
-operativa de la facultad, que es más actual que el PDF.
+El documento autoritativo está publicado:
+`undef.edu.ar/fadena/wp-content/uploads/2025/10/Plan-de-estudios-CIBERDEFENSA.pdf`
 
-| Categoría del campus | Materias listadas |
-| --- | --- |
-| 1er año – 1er cuatrimestre – LC 2026 | 7 |
-| 1er año – 2do cuatrimestre – LC 2026 | 10 (9 distintas) |
-| 2do año – 1er cuatrimestre – LC 2026 | 8 |
-| 2do año – 2do cuatrimestre – LC 2026 | 9 |
+Cotejado contra este plan, el resultado es **coincidencia exacta**: 37 materias,
+**0 discrepancias de año**, todas las correlatividades idénticas y **2624 h**
+total. El campo `semester` del JSON registra la distribución que sigue.
 
-Resultado: **18 materias distintas** en los dos primeros años. Las 18 existen
-en este plan con el mismo nombre y **ninguna materia del campus es ajena al
-plan**. Ese es el dato importante: la lista de 37 materias queda confirmada.
+| Año | Materias | 1er cuatrimestre | 2do cuatrimestre | Horas |
+| --- | --- | --- | --- | --- |
+| 1 | 12 | 1 a 5 | 6 a 12 | 768 |
+| 2 | 9 | 13 a 17 | 18 a 21 | 672 |
+| 3 | 8 | 22 y 23 | 24 a 29 | 576 |
+| 4 | 8 | 30 a 33 | 34 a 37 | 608 |
+| **Total** | **37** | | | **2624** |
 
-Discrepancias encontradas:
+Esto reemplaza la advertencia anterior: la distribución por cuatrimestre **ya no
+es una incógnita**. Viene del plan aprobado, no de una reconstrucción.
 
-| Materia | Este plan | Campus 2026 |
+## El campus 2026 NO coincide con el plan aprobado
+
+Aviso para no volver a equivocarse en esto: las categorías del campus **no
+siguen el plan aprobado** y no sirven para inferir año ni cuatrimestre.
+
+| Materia | Plan oficial | Campus 2026 |
 | --- | --- | --- |
-| 11 Análisis Matemático II | año 1 | **año 2** |
-| 12 Álgebra II | año 1 | **año 2** |
-| 7 Infraestructura de Telecomunicaciones | año 1 | no aparece |
-| 20 Sistema de Gestión de Seguridad de la Información | año 2 | no aparece |
-| 21 Protección de Infraestructuras Críticas | año 2 | no aparece |
+| 11 Análisis Matemático II | año 1, 2do cuat | listada en **año 2** |
+| 12 Álgebra II | año 1, 2do cuat | listada en **año 2** |
+| 7 Infraestructura de Telecomunicaciones | año 1, 2do cuat | **sin aula creada** |
+| 20 SGSI | año 2, 2do cuat | **sin aula creada** |
+| 21 Protección de Infraestructuras Críticas | año 2, 2do cuat | **sin aula creada** |
 
-Las materias 11 y 12 el campus las dicta en segundo año: la asignación de año
-de este plan está mal en esos dos casos. Las materias 7, 20 y 21 no tienen aula
-creada en 2026; pueden ser de tercer año o simplemente no haberse abierto
-todavía, y **el campus no alcanza para decidir cuál de las dos**.
+Además, la categoría «1er año – 2do cuatrimestre» repite materias del primero
+e incluye una «copia 1», así que tampoco es una partición limpia por
+cuatrimestre.
 
-El cuatrimestre sigue sin resolverse. Las categorías de 2026 no son una
-partición limpia: la de 1er año – 2do cuatrimestre repite las mismas materias
-del primero (01, 02, 03, 04, 05, 08 y 10) e incluso incluye una «copia 1». Para
-fijar la distribución fina hace falta el plan aprobado, no el campus.
+Lo único que el campus confirma es la **lista de nombres**: las 18 materias
+distintas de los dos primeros años existen en este plan con el mismo nombre y
+ninguna le es ajena. Nada más que eso.
+
+**Regla: cuando el campus y el plan oficial discrepan, gana el plan oficial.**
 
 Nota de operación: el código `LCiberDef-NN` **se reinicia por año**, no es un
 identificador único de materia. `LCiberDef-06` es *Sistemas de Tratamiento de
