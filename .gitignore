@@ -14,5 +14,10 @@ laboratorio/*.img
 .env
 .venv/
 
+# Estado local de herramientas Pi
+.atl/
+.codegraph/
+.pi-lens.json
+
 # Sistema
 .DS_Store
