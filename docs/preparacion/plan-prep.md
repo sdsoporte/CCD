@@ -98,7 +98,7 @@ tiempo, sin apuntes.
 
 **Material**: *Computer Networking: A Top-Down Approach* (Kurose & Ross),
 capítulos 1 a 4. Práctica: subnetting a mano todos los días 10 minutos;
-laboratorio con máquinas virtuales (ver `equipo/02-laboratorio.md`), no solo
+laboratorio con máquinas virtuales (ver `../equipo/02-laboratorio.md`), no solo
 Packet Tracer.
 
 **Criterio de salida**: explicar por qué un paquete no llega, capa por capa, y
@@ -156,7 +156,7 @@ semestre de AI.
 | Diciembre 2026 | Red virtual aislada en libvirt + plantillas de VM | 4 |
 | Enero 2027 | Primeras VMs del set (Linux server, Kali, Windows eval) | 4 |
 
-Detalle en `equipo/01-sistema-operativo.md` y `equipo/02-laboratorio.md`. Estas
+Detalle en `../equipo/01-sistema-operativo.md` y `../equipo/02-laboratorio.md`. Estas
 12 h no salen del presupuesto de 80: son instalación, no estudio, y se pueden
 hacer un fin de semana.
 
